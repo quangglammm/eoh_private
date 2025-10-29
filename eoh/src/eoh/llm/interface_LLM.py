@@ -1,3 +1,4 @@
+from eoh.src.eoh.llm.fpt_llm_api import FPTInterfaceAPI
 from ..llm.api_general import InterfaceAPI
 from ..llm.api_local_llm import InterfaceLocalLLM
 
@@ -30,7 +31,7 @@ class InterfaceLLM:
                 print(">> Stop with wrong API setting: Set api_endpoint (e.g., api.chat...) and api_key (e.g., kx-...) !")
                 exit()
 
-            self.interface_llm = InterfaceAPI(
+            self.interface_llm = FPTInterfaceAPI(
                 self.api_endpoint,
                 self.api_key,
                 self.model_LLM,
